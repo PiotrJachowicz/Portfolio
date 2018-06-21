@@ -8,6 +8,7 @@ import { SkillsSectionComponent } from './skills-section/skills-section.componen
 import { ProjectsSectionComponent } from './projects-section/projects-section.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
 import { NavbarItemComponent } from './navbar-item/navbar-item.component';
+import { SectionComponent } from './section/section.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavbarItemComponent } from './navbar-item/navbar-item.component';
     SkillsSectionComponent,
     ProjectsSectionComponent,
     ContactSectionComponent,
-    NavbarItemComponent
+    NavbarItemComponent,
+    SectionComponent
   ],
   imports: [
     BrowserModule
