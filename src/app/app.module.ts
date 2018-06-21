@@ -7,6 +7,7 @@ import { LandingSectionComponent } from './landing-section/landing-section.compo
 import { SkillsSectionComponent } from './skills-section/skills-section.component';
 import { ProjectsSectionComponent } from './projects-section/projects-section.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
+import { NavbarItemComponent } from './navbar-item/navbar-item.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ContactSectionComponent } from './contact-section/contact-section.compo
     LandingSectionComponent,
     SkillsSectionComponent,
     ProjectsSectionComponent,
-    ContactSectionComponent
+    ContactSectionComponent,
+    NavbarItemComponent
   ],
   imports: [
     BrowserModule
