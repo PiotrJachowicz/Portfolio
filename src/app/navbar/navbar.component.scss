@@ -1,5 +1,9 @@
+@import "../../commonStyles/_variables";
+
 nav {
     position:fixed;
     top:0;
     width:100%;    
+    background-color: $main-color;
+    color:$secondary-color;
 }
