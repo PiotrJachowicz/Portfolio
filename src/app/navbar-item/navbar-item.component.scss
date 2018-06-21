@@ -1,5 +1,8 @@
+@import "../../commonStyles/_variables";
+
 li{
     float:right;
     list-style: none;
     padding:10px;
+    color:$light-font-color;
 }
