@@ -9,6 +9,8 @@ import { ProjectsSectionComponent } from './projects-section/projects-section.co
 import { ContactSectionComponent } from './contact-section/contact-section.component';
 import { NavbarItemComponent } from './navbar-item/navbar-item.component';
 import { SectionComponent } from './section/section.component';
+import { SkillDescriptionComponent } from './skill-description/skill-description.component';
+import { SkillsTagMapComponent } from './skills-tag-map/skills-tag-map.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SectionComponent } from './section/section.component';
     ProjectsSectionComponent,
     ContactSectionComponent,
     NavbarItemComponent,
-    SectionComponent
+    SectionComponent,
+    SkillDescriptionComponent,
+    SkillsTagMapComponent
   ],
   imports: [
     BrowserModule
