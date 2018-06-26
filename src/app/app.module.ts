@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { TagCloudModule } from 'angular-tag-cloud-module';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingSectionComponent } from './landing-section/landing-section.component';
@@ -25,10 +27,8 @@ import { SkillsTagMapComponent } from './skills-tag-map/skills-tag-map.component
     SkillDescriptionComponent,
     SkillsTagMapComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, TagCloudModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  CloudData,
+  CloudOptions,
+  ZoomOnHoverOptions
+} from 'angular-tag-cloud-module';
 
 @Component({
   selector: 'pjp-skills-tag-map',
@@ -6,10 +11,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skills-tag-map.component.scss']
 })
 export class SkillsTagMapComponent implements OnInit {
+  options: CloudOptions = {
+    overflow: false
+  };
 
-  constructor() { }
+  zoomOnHoverOptions: ZoomOnHoverOptions = {
+    scale: 1.3,
+    transitionTime: 1.2,
+    delay: 0.8
+  };
 
-  ngOnInit() {
-  }
+  tags: CloudData[] = [
+    {
+      text: 'Weight-8-link-color',
+      weight: 8,
+      link: 'https://google.com',
+      color: '#ffaaee'
+    },
+    {
+      text: 'Weight-10-link',
+      weight: 10,
+      link: 'https://google.com',
+      color: '#000000'
+    }
+  ];
 
+  constructor() {}
+
+  ngOnInit() {}
 }

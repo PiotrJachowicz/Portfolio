@@ -1,15 +1,13 @@
-:host{
-    overflow: hidden;
+:host {
+  overflow: hidden;
 }
 
-div:first-child{
-    background-color:red;
-    width:66.6666%;
-    float:left;
+div:first-child {
+  width: 66.6666%;
+  float: left;
 }
 
-div:last-child{
-    background-color: blue;
-    width:33.3333%;
-    float:left;
+div:last-child {
+  width: 33.3333%;
+  float: left;
 }
