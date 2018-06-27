@@ -16,7 +16,9 @@ export class SkillsTagMapComponent implements OnInit {
   @ViewChild(TagCloudComponent) tagCloudComponent: TagCloudComponent;
 
   options: CloudOptions = {
-    overflow: false
+    overflow: true,
+    width: 1,
+    height: 1
   };
 
   tags: CloudData[];
@@ -32,9 +34,8 @@ export class SkillsTagMapComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.tags = this.skillTagNotificationService.getSkillTags();
-    this.tagCloudComponent.ngAfterContentInit = () => {
-      this.tagCloudComponent.reDraw();
-    };
+    this.skillTagNotificationService
+      .getSkillTags()
+      .subscribe(x => (this.tags = x));
   }
 }

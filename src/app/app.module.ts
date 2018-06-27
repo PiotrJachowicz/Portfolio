@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { TagCloudModule } from 'angular-tag-cloud-module';
@@ -29,7 +30,7 @@ import { SkillTagNotificationService } from './services/skill-tag-notification.s
     SkillDescriptionComponent,
     SkillsTagMapComponent
   ],
-  imports: [BrowserModule, TagCloudModule],
+  imports: [BrowserModule, TagCloudModule, BrowserAnimationsModule],
   providers: [SkillTagNotificationService],
   bootstrap: [AppComponent]
 })

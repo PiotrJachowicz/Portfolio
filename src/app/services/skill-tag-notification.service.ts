@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CloudData } from 'angular-tag-cloud-module';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,38 +8,11 @@ import { CloudData } from 'angular-tag-cloud-module';
 export class SkillTagNotificationService {
   constructor() {}
 
-  getSkillTags(): CloudData[] {
-    return [
-      {
-        text: 'Weight-8-link-color',
-        weight: 8,
-        link: 'https://google.com',
-        color: '#ffaaee'
-      },
-      {
-        text: 'Weight-10-link',
-        weight: 10,
-        link: 'https://google.com',
-        color: '#000000'
-      },
-      {
-        text: 'Weight-10-link',
-        weight: 10,
-        link: 'https://google.com',
-        color: '#000000'
-      },
-      {
-        text: 'Weight-10-link',
-        weight: 10,
-        link: 'https://google.com',
-        color: '#000000'
-      },
-      {
-        text: 'Weight-10-link',
-        weight: 10,
-        link: 'https://google.com',
-        color: '#000000'
-      }
-    ];
+  getSkillTags(): Observable<CloudData[]> {
+    return of([
+      { text: 'weight-5-rotate(+10)', weight: 5 },
+      { text: 'weight-7-rotate(-20)', weight: 7 },
+      { text: 'weight-9-rotate(+35)', weight: 9 }
+    ]);
   }
 }
