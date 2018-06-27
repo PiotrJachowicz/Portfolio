@@ -14,6 +14,8 @@ import { SectionComponent } from './section/section.component';
 import { SkillDescriptionComponent } from './skill-description/skill-description.component';
 import { SkillsTagMapComponent } from './skills-tag-map/skills-tag-map.component';
 
+import { SkillTagNotificationService } from './services/skill-tag-notification.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,7 @@ import { SkillsTagMapComponent } from './skills-tag-map/skills-tag-map.component
     SkillsTagMapComponent
   ],
   imports: [BrowserModule, TagCloudModule],
-  providers: [],
+  providers: [SkillTagNotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
