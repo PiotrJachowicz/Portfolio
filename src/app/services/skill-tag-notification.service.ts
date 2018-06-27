@@ -10,9 +10,9 @@ export class SkillTagNotificationService {
 
   getSkillTags(): Observable<CloudData[]> {
     return of([
-      { text: 'weight-5-rotate(+10)', weight: 5 },
-      { text: 'weight-7-rotate(-20)', weight: 7 },
-      { text: 'weight-9-rotate(+35)', weight: 9 }
+      { text: 'weight-5-rotate(+10)', weight: 1 },
+      { text: 'weight-7-rotate(-20)', weight: 2 },
+      { text: 'weight-9-rotate(+35)', weight: 3 }
     ]);
   }
 }
