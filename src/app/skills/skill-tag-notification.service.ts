@@ -3,12 +3,16 @@ import { CloudData } from 'angular-tag-cloud-module';
 import { SkillData } from './skill-data.model';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { convertColor } from '../shared/index';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SkillTagNotificationService {
   constructor() {}
+
+  private mainColor = '#0dc079';
+  private secondaryColor = '#88ccf1';
 
   private skillData: Observable<SkillData[]> = of([
     { text: 'ASP.NET Core', weight: 5, description: '' },
@@ -39,10 +43,22 @@ export class SkillTagNotificationService {
         x.map(item => {
           return {
             text: item.text,
-            weight: item.weight
+            weight: item.weight,
+            color: this.getColor(item.weight)
           };
         })
       )
     );
+  }
+
+  private getColor(itemWeight: number): string {
+    let color: string;
+    if (itemWeight % 2 === 1) {
+      color = this.mainColor;
+    } else {
+      color = this.secondaryColor;
+    }
+
+    return convertColor(color, (itemWeight / 2) * -10);
   }
 }

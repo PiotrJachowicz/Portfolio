@@ -6,14 +6,14 @@ import { SkillDescriptionComponent } from './skill-description/skill-description
 import { SkillsSectionComponent } from './skills-section/skills-section.component';
 import { SkillTagNotificationService } from './skill-tag-notification.service';
 import { SkillsTagMapComponent } from './skills-tag-map/skills-tag-map.component';
+import { SharedModule } from '../shared';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, TagCloudModule, SharedModule],
   declarations: [
     SkillDescriptionComponent,
     SkillsSectionComponent,
-    SkillsTagMapComponent,
-    TagCloudModule
+    SkillsTagMapComponent
   ],
   providers: [SkillTagNotificationService],
   exports: [SkillsSectionComponent]
