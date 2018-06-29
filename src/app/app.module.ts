@@ -2,20 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
-import { TagCloudModule } from 'angular-tag-cloud-module';
-
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingSectionComponent } from './landing-section/landing-section.component';
-import { SkillsSectionComponent } from './skills-section/skills-section.component';
+import { SkillsModule, SkillsSectionComponent } from './skills/index';
 import { ProjectsSectionComponent } from './projects-section/projects-section.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
 import { NavbarItemComponent } from './navbar-item/navbar-item.component';
-import { SectionComponent } from './section/section.component';
-import { SkillDescriptionComponent } from './skill-description/skill-description.component';
-import { SkillsTagMapComponent } from './skills-tag-map/skills-tag-map.component';
 
-import { SkillTagNotificationService } from './services/skill-tag-notification.service';
+import { SharedModule, SectionComponent } from './shared/index';
 
 @NgModule({
   declarations: [
@@ -26,12 +21,10 @@ import { SkillTagNotificationService } from './services/skill-tag-notification.s
     ProjectsSectionComponent,
     ContactSectionComponent,
     NavbarItemComponent,
-    SectionComponent,
-    SkillDescriptionComponent,
-    SkillsTagMapComponent
+    SectionComponent
   ],
-  imports: [BrowserModule, TagCloudModule, BrowserAnimationsModule],
-  providers: [SkillTagNotificationService],
+  imports: [BrowserModule, BrowserAnimationsModule, SkillsModule, SharedModule],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

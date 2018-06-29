@@ -5,7 +5,7 @@ import {
   ZoomOnHoverOptions,
   TagCloudComponent
 } from 'angular-tag-cloud-module';
-import { SkillTagNotificationService } from '../services/skill-tag-notification.service';
+import { SkillTagNotificationService } from '../skill-tag-notification.service';
 
 @Component({
   selector: 'pjp-skills-tag-map',
