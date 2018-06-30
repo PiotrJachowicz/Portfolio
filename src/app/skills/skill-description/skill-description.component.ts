@@ -1,3 +1,5 @@
+import { SkillData } from './../skill-data.model';
+import { SkillTagNotificationService } from './../skill-tag-notification.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skill-description.component.scss']
 })
 export class SkillDescriptionComponent implements OnInit {
+  private selectedSkill: SkillData;
 
-  constructor() { }
+  constructor(private skillTagNotificationService: SkillTagNotificationService) { }
 
   ngOnInit() {
+    this.skillTagNotificationService.getCurrentSkillData().subscribe(x => this.selectedSkill = x);
   }
 
 }

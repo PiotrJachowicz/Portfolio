@@ -29,7 +29,7 @@ export class SkillsTagMapComponent implements OnInit {
     delay: 0.8
   };
 
-  onSkillSelected(clickedSkill: CloudData){
+  onSkillSelected(clickedSkill: CloudData) {
     this.skillTagNotificationService.setCurrentSkillData(clickedSkill.text);
   }
 
