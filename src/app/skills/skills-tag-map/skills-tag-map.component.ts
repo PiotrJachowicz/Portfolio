@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 import {
   CloudData,
   CloudOptions,
@@ -41,5 +41,10 @@ export class SkillsTagMapComponent implements OnInit {
     this.skillTagNotificationService
       .getSkillTags()
       .subscribe(x => (this.tags = x));
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.tagCloudComponent.reDraw();
   }
 }

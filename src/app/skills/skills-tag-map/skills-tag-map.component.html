@@ -1,9 +1,5 @@
 <div>
-  <angular-tag-cloud 
-    [data]="tags" 
-    [overflow]="options.overflow" 
-    [zoomOnHover]="zoomOnHoverOptions" 
-    (clicked)="onSkillSelected($event)"
-    strict="true">
+  <angular-tag-cloud [data]="tags" [overflow]="options.overflow" [zoomOnHover]="zoomOnHoverOptions" (clicked)="onSkillSelected($event)"
+    strict="true" width="1">
   </angular-tag-cloud>
 </div>

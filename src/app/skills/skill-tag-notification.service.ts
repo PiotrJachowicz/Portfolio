@@ -7,7 +7,6 @@ import { convertColor } from '../shared/index';
 import { Observable, of, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -17,28 +16,28 @@ export class SkillTagNotificationService {
   private mainColor = '#0dc079';
   private secondaryColor = '#88ccf1';
 
-  private currentSkill: Subject<SkillData>;
+  private currentSkill: Subject<SkillData> = new Subject<SkillData>();
 
   private skillData: SkillData[] = [
     { text: 'ASP.NET Core', weight: 5, description: 'lorem ipsum' },
-    { text: 'Angular', weight: 4, description: 'lorem ipsum' },
+    { text: 'Angular', weight: 5, description: 'lorem ipsum' },
     { text: 'Vue.js', weight: 3, description: 'lorem ipsum' },
-    { text: 'SCSS', weight: 3, description: 'lorem ipsum' },
-    { text: 'CSS', weight: 3, description: 'lorem ipsum' },
+    { text: 'SCSS', weight: 2, description: 'lorem ipsum' },
+    { text: 'CSS', weight: 1, description: 'lorem ipsum' },
     { text: 'ASP.NET Web Api', weight: 4, description: 'lorem ipsum' },
     { text: 'ASP.NET MVC', weight: 4, description: 'lorem ipsum' },
-    { text: 'jQuery', weight: 4, description: 'lorem ipsum' },
-    { text: 'Javascript', weight: 5, description: 'lorem ipsum' },
-    { text: 'C#', weight: 4, description: 'lorem ipsum' },
-    { text: 'HTML', weight: 4, description: 'lorem ipsum' },
-    { text: 'CI/CD', weight: 4, description: 'lorem ipsum' },
-    { text: 'Jenkins', weight: 4, description: 'lorem ipsum' },
-    { text: 'TeamCity', weight: 4, description: 'lorem ipsum' },
-    { text: 'SCRUM', weight: 4, description: 'lorem ipsum' },
-    { text: 'Git', weight: 4, description: 'lorem ipsum' },
-    { text: 'Jira', weight: 4, description: 'lorem ipsum' },
-    { text: 'SQL', weight: 4, description: 'lorem ipsum' },
-    { text: 'MS SQL Server', weight: 4, description: 'lorem ipsum' },
+    { text: 'jQuery', weight: 2, description: 'lorem ipsum' },
+    { text: 'Javascript', weight: 3, description: 'lorem ipsum' },
+    { text: 'C#', weight: 5, description: 'lorem ipsum' },
+    { text: 'HTML', weight: 2, description: 'lorem ipsum' },
+    { text: 'CI/CD', weight: 1, description: 'lorem ipsum' },
+    { text: 'Jenkins', weight: 2, description: 'lorem ipsum' },
+    { text: 'TeamCity', weight: 2, description: 'lorem ipsum' },
+    { text: 'SCRUM', weight: 3, description: 'lorem ipsum' },
+    { text: 'Git', weight: 1, description: 'lorem ipsum' },
+    { text: 'Jira', weight: 1, description: 'lorem ipsum' },
+    { text: 'SQL', weight: 3, description: 'lorem ipsum' },
+    { text: 'MS SQL Server', weight: 2, description: 'lorem ipsum' },
     { text: 'TypeScript', weight: 4, description: 'lorem ipsum' }
   ];
 

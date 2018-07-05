@@ -2,12 +2,7 @@
   overflow: hidden;
 }
 
-div:first-child {
-  width: 66.6666%;
+div {
   float: left;
-}
-
-div:last-child {
-  width: 33.3333%;
-  float: left;
+  width: 50%;
 }
