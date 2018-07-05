@@ -1,0 +1,8 @@
+@import '../../../commonStyles/_variables.scss';
+:host {
+  color: $dark-font-color;
+}
+
+h3 {
+  color: $header-font-color;
+}

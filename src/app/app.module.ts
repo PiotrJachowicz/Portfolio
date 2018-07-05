@@ -6,22 +6,27 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingSectionComponent } from './landing-section/landing-section.component';
 import { SkillsModule } from './skills/index';
-import { ProjectsSectionComponent } from './projects-section/projects-section.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
 import { NavbarItemComponent } from './navbar-item/navbar-item.component';
 
 import { SharedModule } from './shared/index';
+import { ProjectsModule } from './projects/projects.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LandingSectionComponent,
-    ProjectsSectionComponent,
     ContactSectionComponent,
     NavbarItemComponent
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, SkillsModule, SharedModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    SkillsModule,
+    SharedModule,
+    ProjectsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

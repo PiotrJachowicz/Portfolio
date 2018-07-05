@@ -5,7 +5,7 @@ import {
   ZoomOnHoverOptions,
   TagCloudComponent
 } from 'angular-tag-cloud-module';
-import { SkillTagNotificationService } from '../skill-tag-notification.service';
+import { SkillsService } from '../skills.service';
 
 @Component({
   selector: 'pjp-skills-tag-map',
@@ -30,17 +30,13 @@ export class SkillsTagMapComponent implements OnInit {
   };
 
   onSkillSelected(clickedSkill: CloudData) {
-    this.skillTagNotificationService.setCurrentSkillData(clickedSkill.text);
+    this.skillsService.setCurrentSkillData(clickedSkill.text);
   }
 
-  constructor(
-    private skillTagNotificationService: SkillTagNotificationService
-  ) {}
+  constructor(private skillsService: SkillsService) {}
 
   ngOnInit() {
-    this.skillTagNotificationService
-      .getSkillTags()
-      .subscribe(x => (this.tags = x));
+    this.skillsService.getSkillTags().subscribe(x => (this.tags = x));
   }
 
   @HostListener('window:resize', ['$event'])
